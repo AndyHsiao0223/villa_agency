@@ -12,6 +12,7 @@ interface Props {
 const BestDealDetails: React.FC<Props> = (props: Props) => {
   return (
     <section className="lg:flex lg:gap-10 lg:px-0">
+      {/* DRY */}
       <section className="shadow-around mb-12 flex h-[45vh] w-full flex-col justify-around rounded-xl pt-4 lg:w-[30vw]">
         <div className="mx-7">
           <div className="mb-5 flex items-center justify-between">

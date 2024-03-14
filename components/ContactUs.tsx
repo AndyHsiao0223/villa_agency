@@ -25,6 +25,7 @@ const ContactUs: React.FC = () => {
         </div>
       </section>
       <section className="px-7 lg:flex lg:justify-center lg:space-x-16">
+        {/* DRY */}
         <div className="shadow-around mb-6 flex h-[15vh] w-full flex-col justify-around rounded-xl lg:w-[25vw]">
           <InfoIcon
             src="/images/phone-icon.png"

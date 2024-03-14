@@ -36,6 +36,8 @@ const Featured: React.FC = () => {
           Best Appartment
           <br />& Sea View
         </h1>
+
+        {/* DRY */}
         <Accordion
           type="single"
           collapsible

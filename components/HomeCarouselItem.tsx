@@ -13,7 +13,13 @@ interface Props {
 const HomeCarouselItem: React.FC<Props> = (props: Props) => {
   return (
     <CarouselItem className="relative h-[89.8vh] w-full">
-      <Image src={props.src} alt={props.alt} fill className="object-cover" />
+      <Image
+        src={props.src}
+        alt={props.alt}
+        fill
+        loading="eager"
+        className="object-cover"
+      />
       <div className="lg:px-40">
         <p className="relative left-10 top-64 h-fit w-fit bg-white px-4 py-1.5 md:left-40 md:top-56">
           {props.blackTag}

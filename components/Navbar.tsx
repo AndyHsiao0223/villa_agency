@@ -62,6 +62,8 @@ const Navbar: React.FC = () => {
               )}
             </button>
           </DropdownMenuTrigger>
+
+          {/* DRY */}
           <DropdownMenuContent className="relative top-6 w-[100vw] bg-white">
             <DropdownMenuItem className="flex justify-center">
               <h2 className="font-bold text-slate-800 duration-500 hover:text-orange-600">

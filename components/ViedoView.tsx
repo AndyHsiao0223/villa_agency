@@ -23,6 +23,8 @@ const ViedoView: React.FC = () => {
           ></iframe>
         </div>
       </section>
+
+      {/* DRY */}
       <section className="flex flex-col items-center lg:flex-row lg:justify-center lg:space-x-12 xl:space-x-52">
         <div>
           <div className="relative left-56 top-6 h-12 w-12 rounded-full bg-orange-600" />
