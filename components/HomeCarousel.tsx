@@ -1,5 +1,5 @@
 import React from "react";
-import { Carousel, CarouselContent, CarouselItem } from "./ui/carousel";
+import { Carousel, CarouselContent } from "./ui/carousel";
 import HomeCarouselItem from "./HomeCarouselItem";
 import { carouselItemData } from "../public/contents";
 

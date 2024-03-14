@@ -6,6 +6,7 @@ interface Props {
   alt: string;
   blackText: string;
   grayText: string;
+  hrHidden?: boolean;
 }
 
 const InfoIcon: React.FC<Props> = (props: Props) => {
@@ -24,7 +25,7 @@ const InfoIcon: React.FC<Props> = (props: Props) => {
           <p className="text-gray-400">{props.grayText}</p>
         </div>
       </div>
-      <hr className="my-5" />
+      <hr className={`my-5 ${props.hrHidden && "hidden"}`} />
     </div>
   );
 };

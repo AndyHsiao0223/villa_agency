@@ -8,16 +8,16 @@ import InfoIcon from "./InfoIcon";
 
 const Featured: React.FC = () => {
   return (
-    <div className="mt-32 px-3 lg:flex lg:gap-5 lg:px-0">
-      <section className="lg:w-[30vw]">
+    <div className="mt-32 px-7 lg:flex lg:justify-center">
+      <section className="lg:w-[26vw]">
         <Image
           src="/images/featured.jpg"
           alt="featured"
           width={600}
           height={800}
-          className="relative left-20 w-[75vw] lg:w-[20vw]"
+          className="relative left-20 w-[75vw] lg:left-0 lg:w-[20vw]"
         />
-        <div className="relative bottom-12 left-6 h-28 w-28 rounded-full bg-orange-600 p-4">
+        <div className="relative bottom-12 left-6 h-28 w-28 rounded-full bg-orange-600 p-4 lg:-left-12">
           <Image
             src="/images/featured-icon.png"
             alt="featured-icon"
@@ -28,7 +28,7 @@ const Featured: React.FC = () => {
         </div>
       </section>
 
-      <section className="mb-16 lg:w-[30vw]">
+      <section className="mb-16 lg:w-[26vw]">
         <p className="flex items-center font-bold text-red-400">
           <span className="mr-1 text-xl lg:text-2xl">l</span>FEATURED
         </p>
@@ -39,7 +39,7 @@ const Featured: React.FC = () => {
         <Accordion
           type="single"
           collapsible
-          className="mb-6 mt-12 w-full rounded-lg bg-slate-100 px-3 pb-3"
+          className="mb-6 mt-12 w-[90%] rounded-lg bg-slate-100 px-3 pb-3"
         >
           <AccordionItem value="item-1">
             <AccordionTrigger className="text-orange-600">
@@ -74,7 +74,7 @@ const Featured: React.FC = () => {
         </Accordion>
       </section>
 
-      <section className="shadow-around mb-28 flex h-[60vh] w-full flex-col justify-around rounded-xl pt-4 lg:w-[30vw]">
+      <section className="shadow-around mb-28 flex h-[60vh] w-full flex-col justify-around rounded-xl pt-4 lg:w-[26vw]">
         <InfoIcon
           src="/images/info-icon-01.png"
           alt="info-icon-01"
