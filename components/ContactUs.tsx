@@ -1,10 +1,16 @@
 import React from "react";
 import InfoIcon from "./InfoIcon";
 
-const ContactUs: React.FC = () => {
+interface Page {
+  contentHidden?: boolean;
+}
+
+const ContactUs: React.FC<Page> = (props: Page) => {
   return (
     <div>
-      <section className="mb-64 h-[68vh] bg-[url('/images/contact-bg.jpg')] bg-cover px-7 pt-14 lg:mb-40">
+      <section
+        className={`${props.contentHidden ? "mb-64" : "mb-96"} h-[68vh] bg-[url('/images/contact-bg.jpg')] bg-cover px-7 pt-14 lg:mb-52`}
+      >
         <p className="mb-3 flex items-center justify-center font-bold text-red-400">
           <span className="mr-1 text-xl">l </span>CONTACT US
         </p>
@@ -13,6 +19,15 @@ const ContactUs: React.FC = () => {
             Get In Touch With
           </h1>
           <h1 className="text-4xl font-extrabold lg:text-5xl">Our Agents</h1>
+          <br className={`${props.contentHidden && "hidden"}`} />
+          <p className={`${props.contentHidden && "hidden"}`}>
+            When you really need to download free CSS templates, please remember
+            our website TemplateMo. Also, tell your friends about our website.
+            <br className="hidden xl:block" />
+            Thank you for visiting. There is a variety of Bootstrap HTML CSS
+            templates on our website. If you need more information, please
+            contact us.
+          </p>
         </div>
         <div className="flex justify-center">
           <iframe
@@ -26,7 +41,7 @@ const ContactUs: React.FC = () => {
       </section>
       <section className="px-7 lg:flex lg:justify-center lg:space-x-16">
         {/* DRY */}
-        <div className="shadow-around mb-6 flex h-[15vh] w-full flex-col justify-around rounded-xl lg:w-[25vw]">
+        <div className="mb-6 flex h-[15vh] w-full flex-col justify-around rounded-xl shadow-around lg:w-[25vw]">
           <InfoIcon
             src="/images/phone-icon.png"
             alt="phone-icon"
@@ -35,7 +50,7 @@ const ContactUs: React.FC = () => {
             hrHidden={true}
           />
         </div>
-        <div className="shadow-around mb-12 flex h-[15vh] w-full flex-col justify-around rounded-xl lg:w-[25vw]">
+        <div className="mb-12 flex h-[15vh] w-full flex-col justify-around rounded-xl shadow-around lg:w-[25vw]">
           <InfoIcon
             src="/images/email-icon.png"
             alt="email-icon"
