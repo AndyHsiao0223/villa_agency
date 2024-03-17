@@ -11,7 +11,7 @@ export default function Home() {
       <Featured />
       <ViedoView />
       <BestDeal />
-      <ContactUs />
+      <ContactUs contentHidden={true} />
     </main>
   );
 }
