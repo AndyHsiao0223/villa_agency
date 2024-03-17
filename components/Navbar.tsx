@@ -11,6 +11,7 @@ import {
   DropdownMenuTrigger,
 } from "./ui/dropdown-menu";
 import ScheduleVisit from "./ScheduleVisit";
+import { navbarData } from "@/public/contents";
 
 const Navbar: React.FC = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -26,19 +27,17 @@ const Navbar: React.FC = () => {
       </h1>
 
       {/* large device */}
-      <h2 className="hidden text-slate-800 duration-500 hover:text-orange-600 lg:block">
-        <Link href="/">Home</Link>
-      </h2>
-      <h2 className="hidden text-slate-800 duration-500 hover:text-orange-600 lg:block">
-        <Link href="/properties">Properties</Link>
-      </h2>
-      <h2 className="hidden text-slate-800 duration-500 hover:text-orange-600 lg:block">
-        <Link href="/property_details">Property Details</Link>
-      </h2>
-      <h2 className="hidden text-slate-800 duration-500 hover:text-orange-600 lg:block">
-        <Link href="/contact_us">Contact Us</Link>
-      </h2>
-      <ScheduleVisit hidden={true} />
+      {navbarData.map((data, key) => (
+        <h2
+          key={key}
+          className="hidden text-slate-800 duration-500 hover:text-orange-600 lg:block"
+        >
+          <Link href={data.href}>{data.text}</Link>
+        </h2>
+      ))}
+      <div className="hidden lg:block">
+        <ScheduleVisit />
+      </div>
 
       {/* small device */}
       <div className="lg:hidden">
@@ -63,34 +62,17 @@ const Navbar: React.FC = () => {
             </button>
           </DropdownMenuTrigger>
 
-          {/* DRY */}
           <DropdownMenuContent className="relative top-6 w-[100vw] bg-white">
-            <DropdownMenuItem className="flex justify-center">
-              <h2 className="font-bold text-slate-800 duration-500 hover:text-orange-600">
-                <Link href="/">Home</Link>
-              </h2>
-            </DropdownMenuItem>
-            <DropdownMenuSeparator className="m-1 bg-slate-300" />
-
-            <DropdownMenuItem className="flex justify-center">
-              <h2 className="font-bold text-slate-800 duration-500 hover:text-orange-600">
-                <Link href="/properties">Properties</Link>
-              </h2>
-            </DropdownMenuItem>
-            <DropdownMenuSeparator className="m-1 bg-slate-300" />
-
-            <DropdownMenuItem className="flex justify-center">
-              <h2 className="font-bold text-slate-800 duration-500 hover:text-orange-600">
-                <Link href="/property_details">Property Details</Link>
-              </h2>
-            </DropdownMenuItem>
-            <DropdownMenuSeparator className="m-1 bg-slate-300" />
-
-            <DropdownMenuItem className="flex justify-center">
-              <h2 className="font-bold text-slate-800 duration-500 hover:text-orange-600">
-                <Link href="/contact_us">Contact Us</Link>
-              </h2>
-            </DropdownMenuItem>
+            {navbarData.map((data, key) => (
+              <div key={key}>
+                <DropdownMenuItem className="flex justify-center">
+                  <h2 className="font-bold text-slate-800 duration-500 hover:text-orange-600">
+                    <Link href={data.href}>{data.text}</Link>
+                  </h2>
+                </DropdownMenuItem>
+                <DropdownMenuSeparator className="m-1 bg-slate-300" />
+              </div>
+            ))}
           </DropdownMenuContent>
         </DropdownMenu>
       </div>

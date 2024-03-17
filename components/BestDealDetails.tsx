@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import ScheduleVisit from "./ScheduleVisit";
+import { bestDealTitle } from "@/public/contents";
 
 interface Props {
   details: string[];
@@ -12,8 +13,7 @@ interface Props {
 const BestDealDetails: React.FC<Props> = (props: Props) => {
   return (
     <section className="lg:flex lg:gap-10 lg:px-0">
-      {/* DRY */}
-      <section className="shadow-around mb-12 flex h-[45vh] w-full flex-col justify-around rounded-xl pt-4 lg:w-[30vw]">
+      <section className="mb-12 flex h-[45vh] w-full flex-col justify-around rounded-xl pt-4 shadow-around lg:w-[30vw]">
         <div className="mx-7">
           <div className="mb-5 flex items-center justify-between">
             <p className="text-gray-400">Total Flat Space</p>

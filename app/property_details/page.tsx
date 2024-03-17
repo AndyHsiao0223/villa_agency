@@ -11,7 +11,7 @@ const property_details_page = () => {
       <Banner label="HOME / SINGLE PROPERTY" title={["SINGLE", "PROPERTY"]} />
       <div className="relative mx-5 mb-10 h-[40vh] xl:h-[60vh]">
         <Image
-          src="/images/single-property.jpg"
+          src="/images/single-property.webp"
           alt="single property"
           fill
           className="object-cover"

@@ -14,7 +14,7 @@ const ScheduleVisit: React.FC<Props> = (props: Props) => {
       >
         <div className="relative right-[1px] rounded-full bg-orange-600 p-3">
           <Image
-            src="/images/calendar.png"
+            src="/images/calendar.webp"
             alt="calendar"
             width={18}
             height={18}
