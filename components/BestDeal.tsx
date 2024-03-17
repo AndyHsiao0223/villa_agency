@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import {
   bestDealAppartment,
+  bestDealButton,
   bestDealPenthouse,
   bestDealVilla,
 } from "@/public/contents";
@@ -10,10 +11,6 @@ import BestDealDetails from "./BestDealDetails";
 
 const BestDeal: React.FC = () => {
   const [category, setCategory] = useState("Appartment");
-
-  const handleClick: Function = (prop: string) => {
-    setCategory(prop);
-  };
 
   const switchCategory: Function = (category: string) => {
     switch (category) {
@@ -53,26 +50,16 @@ const BestDeal: React.FC = () => {
           </div>
         </div>
 
-        {/* DRY */}
         <div className="flex items-end justify-center space-x-3">
-          <button
-            onClick={() => handleClick("Appartment")}
-            className="h-10 w-28 rounded bg-black text-white hover:bg-orange-500 lg:h-12 lg:w-36"
-          >
-            Appartment
-          </button>
-          <button
-            onClick={() => handleClick("Villa")}
-            className="h-10 w-28 rounded bg-black text-white hover:bg-orange-500 lg:h-12 lg:w-36"
-          >
-            Villa House
-          </button>
-          <button
-            onClick={() => handleClick("Penthouse")}
-            className="h-10 w-28 rounded bg-black text-white hover:bg-orange-500 lg:h-12 lg:w-36"
-          >
-            Penthouse
-          </button>
+          {bestDealButton.map((data, key) => (
+            <button
+              key={key}
+              onClick={() => setCategory(data.handleClick)}
+              className="h-10 w-28 rounded bg-black text-white hover:bg-orange-500 lg:h-12 lg:w-36"
+            >
+              {data.content}
+            </button>
+          ))}
         </div>
       </section>
 

@@ -9,7 +9,7 @@ const ContactUs: React.FC<Page> = (props: Page) => {
   return (
     <div>
       <section
-        className={`${props.contentHidden ? "mb-64" : "mb-96"} h-[68vh] bg-[url('/images/contact-bg.jpg')] bg-cover px-7 pt-14 lg:mb-52`}
+        className={`${props.contentHidden ? "mb-64" : "mb-96"} h-[68vh] bg-[url('/images/contact-bg.webp')] bg-cover px-7 pt-14 lg:mb-52`}
       >
         <p className="mb-3 flex items-center justify-center font-bold text-red-400">
           <span className="mr-1 text-xl">l </span>CONTACT US
@@ -40,10 +40,9 @@ const ContactUs: React.FC<Page> = (props: Page) => {
         </div>
       </section>
       <section className="px-7 lg:flex lg:justify-center lg:space-x-16">
-        {/* DRY */}
         <div className="mb-6 flex h-[15vh] w-full flex-col justify-around rounded-xl shadow-around lg:w-[25vw]">
           <InfoIcon
-            src="/images/phone-icon.png"
+            src="/images/phone-icon.webp"
             alt="phone-icon"
             blackText="010-020-0340"
             grayText="Phone Number"
@@ -52,7 +51,7 @@ const ContactUs: React.FC<Page> = (props: Page) => {
         </div>
         <div className="mb-12 flex h-[15vh] w-full flex-col justify-around rounded-xl shadow-around lg:w-[25vw]">
           <InfoIcon
-            src="/images/email-icon.png"
+            src="/images/email-icon.webp"
             alt="email-icon"
             blackText="info@villa.co"
             grayText="Business Email"
