@@ -1,7 +1,6 @@
 import React from "react";
 import Image from "next/image";
 import ScheduleVisit from "./ScheduleVisit";
-import { bestDealTitle } from "@/public/contents";
 
 interface Props {
   details: string[];
